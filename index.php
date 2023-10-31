@@ -7,7 +7,7 @@
 </head>
 <body>
     <h2>Login</h2>
-    <form method="post" action="login.php">
+    <form method="post">
         Gebruikersnaam: <input type="text" name="gebruikersnaam"><br>
         Wachtwoord: <input type="password" name="wachtwoord"><br>
         <input type="submit" value="Inloggen">
@@ -31,7 +31,7 @@
         if ($stmt->rowCount() > 0) {
             // Inloggen gelukt
             echo "Inloggen geslaagd. Welkom, $gebruikersnaam!";
-            header("Location: test.php");
+            header("Location: dashboard.php");
         } else {
             // Inloggen mislukt
             echo "Inloggen mislukt. Controleer je gegevens.";
