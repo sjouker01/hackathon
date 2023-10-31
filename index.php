@@ -14,6 +14,7 @@
     </form>
 
     <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
         require "dbconnect.php";
 
         // Gebruikersnaam en wachtwoord van het formulier ophalen
