@@ -42,3 +42,5 @@
     ?>
 </body>
 </html>
+
+//verander gebruikersnaam naar email
