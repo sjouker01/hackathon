@@ -30,6 +30,8 @@
 
         if ($stmt->rowCount() > 0) {
             // Inloggen gelukt
+            session_start();
+            $_SESSION["gebruikersnaam"] = $gebruikersnaam;
             echo "Inloggen geslaagd. Welkom, $gebruikersnaam!";
             header("Location: dashboard.php");
         } else {
