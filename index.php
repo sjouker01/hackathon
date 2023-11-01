@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="css/global.css">
     <title>Login</title>
 </head>
+
+
 <body>
     <nav class="navbar">
         <div class="navbar-brand">
@@ -30,34 +32,28 @@
         </form>
     </div>
 
-    <?php
-    if (isset($_POST["gebruikersnaam"]) && isset($_POST["wachtwoord"])) {
-        require "dbconnect.php";
 
-        // Gebruikersnaam en wachtwoord van het formulier ophalen
-        $gebruikersnaam = $_POST["gebruikersnaam"];
-        $wachtwoord = $_POST["wachtwoord"];
+<h1>welkom</h1>
+<a href="inlog.php"> Login</a><br>
+<?php
+require_once "conn.php";
 
-        // Query voor het controleren van gebruikersnaam en wachtwoord
-        $query = "SELECT * FROM gebruikers WHERE gebruikersnaam = :gebruikersnaam AND wachtwoord = :wachtwoord";
-        $stmt = $conn->prepare($query);
-        $stmt->bindParam(':gebruikersnaam', $gebruikersnaam);
-        $stmt->bindParam(':wachtwoord', $wachtwoord);
-        $stmt->execute();
-
-        if ($stmt->rowCount() > 0) {
-            // Inloggen gelukt
-            session_start();
-            $_SESSION["gebruikersnaam"] = $gebruikersnaam;
-            echo "Inloggen geslaagd. Welkom, $gebruikersnaam!";
-            header("Location: dashboard.php");
-        } else {
-            // Inloggen mislukt
-            echo "Inloggen mislukt. Controleer je gegevens.";
-        }
+    session_start();
+if (isset($_SESSION['gebruikersnaam'])) {
+        $gebruikersnaam = $_SESSION['gebruikersnaam'];
+        echo "Welkom  $gebruikersnaam ! <br>";
+        echo "<a href='dashboard.php'>dashboard</a> <br>";
+      
+    } else {
+        echo "Welkom, gast!";
+        echo "als iet wil doen moet je inlooggen <br>";
     }
-    ?>
+
+?>
 </body>
 </html>
+
+
+=======
 
 
