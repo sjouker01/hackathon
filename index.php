@@ -3,15 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/global.css">
     <title>Login</title>
 </head>
 <body>
-    <h2>Login</h2>
-    <form method="post">
-        Gebruikersnaam: <input type="text" name="gebruikersnaam"><br>
-        Wachtwoord: <input type="password" name="wachtwoord"><br>
-        <input type="submit" value="Inloggen">
-    </form>
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a href="#">Dashboard</a>
+        </div>
+        <ul class="navbar-nav">
+            <li><a href="#">Leden beheren</a></li>
+            <li><a href="#">Log in</a></li>
+        </ul>
+    </nav>
+
+    <div class="login-form-container">
+        <form class="login-form">
+            <div class="login-container">
+           
+                <h2><b>Inloggen</b></h2>
+        </div>
+ 
+            <input type="text" placeholder="Gebruikersnaam" name="gebruikersnaam" required>
+            <input type="password" placeholder="Wachtwoord" name="wachtwoord" required>
+            <button type="submit">Inloggen</button>
+        </form>
+    </div>
 
     <?php
     if (isset($_POST["gebruikersnaam"]) && isset($_POST["wachtwoord"])) {
@@ -43,4 +60,4 @@
 </body>
 </html>
 
-//verander gebruikersnaam naar email
+

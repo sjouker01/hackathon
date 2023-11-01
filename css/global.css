@@ -1,0 +1,99 @@
+/* Algemene opmaak */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+ 
+/* Navigatiebalk (navbar) */
+.navbar {
+    background-color: #07aaf5; /* Blauwe achtergrondkleur */
+    color: #fff; /* Witte tekstkleur */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+ 
+.navbar-brand a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
+}
+ 
+.navbar-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ 
+.navbar-nav li {
+    display: inline;
+    margin-right: 20px;
+}
+ 
+.navbar-nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+ 
+ 
+.login-form-container {
+    background-color: #ffffff; /* Dezelfde blauwe kleur als de navbar */
+    color: #fff; /* Witte tekstkleur */
+    text-align: center;
+    padding: 0px 0px 20px 0px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    width: 30vw;
+    position: relative;
+    left: 34vw;
+    top: 20vh;
+    border-radius: 40px;
+    height: 50vh;
+   
+}
+.login-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+ 
+.login-form input {
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-color: lightgray;
+    border-radius: 5px;
+   
+}
+ 
+.login-form button {
+    background-color: #07aaf5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 73.5%;
+    margin-top: 5vh;
+ 
+}
+ 
+.login-container{
+    width: 100%;
+    position: relative;
+    top: 0;
+    background-color: #07aaf5;
+    border-radius: 88px;
+    margin-bottom: 10vh;
+   
+}
