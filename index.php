@@ -3,8 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/global.css">
     <title>Login</title>
 </head>
+
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a href="#">Dashboard</a>
+        </div>
+        <ul class="navbar-nav">
+            <li><a href="#">Leden beheren</a></li>
+            <li><a href="#">Log in</a></li>
+        </ul>
+    </nav>
+
+    <div class="login-form-container">
+        <form class="login-form">
+            <div class="login-container">
+           
+                <h2><b>Inloggen</b></h2>
+        </div>
+ 
+            <input type="text" placeholder="Gebruikersnaam" name="gebruikersnaam" required>
+            <input type="password" placeholder="Wachtwoord" name="wachtwoord" required>
+            <button type="submit">Inloggen</button>
+        </form>
+    </div>
+
 
 <h1>welkom</h1>
 <a href="inlog.php"> Login</a><br>
@@ -25,4 +52,8 @@ if (isset($_SESSION['gebruikersnaam'])) {
 ?>
 </body>
 </html>
+
+
+=======
+
 
